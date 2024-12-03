@@ -3,9 +3,13 @@ import {
   encryptPassword,
   generateRefreshToken,
   generateAccessToken,
+  registerUser,
+  loginUser,
 } from "../controllers/user.controllers.js";
 const router = express.Router();
 router.post("/encryptPassword", encryptPassword);
 router.post("/refreshToken", generateRefreshToken);
 router.post("/accessToken", generateAccessToken);
+router.post("/register", registerUser);
+router.post("/loginUser", loginUser);
 export default router;
